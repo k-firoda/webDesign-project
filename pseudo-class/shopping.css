@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+    height: 75%;
+}
+h1{
+    margin: 2rem;
+    margin-left: 10rem;
+}
+
+.gallery-item{
+    margin: 3rem auto;
+    width: 90%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;   
+}
+.gallery{
+    width: 20%;
+    height:50vh;
+    margin: 2rem;
+    position: relative; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    overflow: hidden;
+}
+.sale{
+    background-color: green;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    z-index: 2;
+    color: white;
+    border-color: green;
+    font-size: 1rem;
+}
+#i1,#i2{
+    margin: 0.5rem;
+    position: absolute;
+    color: green;
+    right:-3%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    background-color: black;
+    border-radius: 50%;
+    opacity: 0;
+}
+#i1{
+    top: 4%;
+    transition: all 0.5s ease-in ;
+}
+#i2{
+    top: 13%;
+    transition: all 0.5s ease-in 0.2s;
+}
+.gallery:hover #i1{
+   opacity: 1;
+   right: 3%;
+}
+.gallery:hover #i2{
+    opacity: 1;
+    right: 3%;
+
+ }
+.content{
+    background-color:white;
+    height: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 0.3rem;
+    transition: all 0.5s linear ;
+}
+.gallery:hover .content{
+    transform: translateY(-30px);
+ }
+
+
+.price{
+    margin: 0.2rem;
+}
+.price span{
+    color: gray;
+    text-decoration: line-through;
+    margin-right: 1rem;
+}
+
+button{
+    background-color: rgb(3, 13, 24);
+    color: rgb(253, 247, 247);
+    text-align: center;
+    padding: 0.3rem;  
+    margin: 0.3rem;
+    font-size: 0.7rem;
+}
+.b1{
+    background-color: green;
+    top: 2%;
+    left: 2%;
+    z-index: 2;
+    color: white;
+    border-color: green;
+    font-size: 1rem;
+    opacity: 0;
+    transition: all 0.5s linear ;
+}
+.gallery:hover .b1{
+    transform: translateY(-30px);
+    opacity: 1;
+ }
+
+
+

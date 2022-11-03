@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-item{
+    margin: 3rem auto;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;  
+}
+.gallery{
+    width: 30%;
+    height: 300px;
+    margin: 1rem;
+    overflow: hidden;
+    position: relative;  
+}
+
+.gallery::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.5s;
+    z-index: 1;
+    opacity: 0;
+
+}
+.gallery:hover:before{
+    opacity: 1;
+}
+.gallery::after{
+    content: '';
+    position: absolute;
+    border: 2px solid rgb(4, 245, 4);
+    top: 10%;
+    left: 10%;
+    bottom: 10%;
+    transition: all 0.5s;
+    right: 10%;
+    opacity: 0;
+}
+.gallery:hover:after{
+    opacity: 1;
+}
+.icon{
+    z-index: 2;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 100px solid rgb(2, 2, 58);
+    border-left: 100px solid transparent;
+    top: 0;
+    right: 0;
+    transition: all 0.5s;
+}
+.icon i{
+    z-index: 3;
+    color: green;
+    font-size: 2rem;
+    transform: translate(-40px,-85px);
+    position: absolute;
+    transition: all 0.5s;
+    
+}
+.gallery:hover .icon{
+    border-top: 120px solid rgb(6, 193, 118);
+    border-left: 120px solid transparent;
+}
+.gallery:hover i{
+    transform: translate(-40px,-83px);
+    color: white;
+    scale: 1.2;
+}
+#center{
+    z-index: 3;
+    color: green;
+    font-size: 2rem;
+    opacity: 0;
+    top: 75%;
+    left: 55%;
+    position: absolute;
+
+}
+.gallery:hover #center{
+    opacity: 0.5;
+}

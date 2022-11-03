@@ -1,0 +1,367 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 100px;
+}
+.face{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(217, 203, 10);
+    border-radius: 50%;
+    margin: 70px;
+    position: relative;
+}
+.eye1{
+    width: 15px;
+    height: 30px;
+    background-color:white;
+    border-radius: 50%;
+    border: 1px black solid;
+    z-index: 1;
+    position: absolute;
+    transform: translate(50px,60px);
+    overflow: hidden;
+}
+.eye2{
+    width: 15px;
+    height: 30px;
+    background-color:white;
+    border-radius: 50%;
+    border: 1px black solid;
+    z-index: 1;
+    position: absolute;
+    transform: translate(130px,60px);
+    overflow: hidden;
+}
+.pupil1{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    border-radius: 50%;
+    transform: translate(0px,15px);
+    rotate: 10deg;
+    z-index: 2;
+}
+.pupil2{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    border-radius: 50%;
+    transform: translate(0px,15px);
+    rotate: 10deg;
+    z-index: 2;
+}
+.eyebrow1{
+    position: absolute;
+    height: 25px;
+    width: 10px;
+    border-radius:  0 20px 0 20px;
+    border-left: 2px solid black;
+    rotate: 90deg;
+    transform: translate(45px,-50px);
+    z-index: 2;
+}
+.eyebrow2{
+    position: absolute;
+    height: 25px;
+    width: 10px;
+    border-radius:  0 20px 0 20px;
+    border-left: 2px solid black;
+    rotate: 90deg;
+    transform: translate(45px,135px);
+    scale: 1-1;
+    z-index: 2;
+}
+.nose{
+    position: absolute;
+    width: 5px;
+    height: 20px;
+    background-color: rgb(168, 116, 5);
+    border-radius: 50%;
+    z-index: 1;
+    transform: translate(97.5px,100px);
+}
+.lips{
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    border-radius: 80%;
+    box-shadow: 0px 3px 1px 0px rgb(168, 116, 5);
+    z-index: 1;
+    transform: translate(60px,125px);   
+}
+.face{
+    margin: 20px;
+    animation: roll 10s linear infinite reverse;
+}
+@keyframes roll {
+    0% {
+        left: 0px;
+        top: 0px;
+        transform: rotate(0deg);
+    }
+    12.5% {
+        left: 200px;
+        top: 0px;
+        transform: rotate(45deg);
+    }
+    25% {
+        left: 400px;
+        top: 0px;
+        transform: rotate(90deg);
+    }
+
+    37.5% {
+        left: 600px;
+        top: 0px;
+        transform: rotate(135deg);
+    }
+    50% {
+        left: 800px;
+        top: 0px;
+        transform: rotate(180deg);
+    }
+    62.5% {
+        left: 600px;
+        top: 0px;
+        transform: rotate(135deg);
+    }
+    75% {
+        left: 400px;
+        top: 0px;
+        transform: rotate(90deg);
+    }
+    87.5% {
+        left: 200px;
+        top: 0px;
+        transform: rotate(45deg);
+    }
+
+    98% {
+        left: 0px;
+        top: 0px;
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        left: 0px;
+        top: 0px;
+        transform: rotate(0deg);
+    }
+
+    /*to{
+        left:calc(100%-20px);
+        transform: rotate(360deg);
+    }*/
+}
+.eye2{
+    animation: wink 10s linear infinite;
+
+}
+@keyframes wink {
+    0% {
+        height: 30px;
+        background-color: white;
+        top: 0px;
+    }
+    25% {
+        height: 30px;
+        background-color: white;
+        top: 0px;
+    }
+    50% {
+        height: 30px;
+        background-color: white;
+        top: 0px;
+    }
+
+    75% {
+        height: 30px;
+        background-color: white;
+        top: 0px;
+    }
+    97% {
+        height: 30px;
+        background-color: white;
+        top: 0px;
+    }
+    98% {
+        height: 0.1px;
+       background-color: black;
+       top: 35px;
+    }
+    100% {
+        height: 30px;
+        background-color: white;
+        top: 0px;
+    }
+}
+.eyebrow2{
+    animation: wink1 10s linear infinite;
+}
+@keyframes wink1 {
+    0% {
+        
+        top: 0px;
+    }
+    25% {
+        
+        top: 0px;
+    }
+    50% {
+        
+        top: 0px;
+    }
+
+    75% {
+        
+        top: 0px;
+    }
+    97% {
+        
+        top: 0px;
+    }
+    98% {
+        
+       top: 15px;
+    }
+    100% {
+        
+        top: 0px;
+    }
+}
+.lips{
+    animation: lips 10s linear infinite reverse;
+}
+@keyframes lips {
+    0% {
+        
+        height: 30px;
+        width: 80px;
+        transform: translate(60px,125px);  
+    }
+    25% {
+        
+        height: 30px;
+        width: 80px;
+        transform: translate(60px,125px);  
+    }
+    50% {
+        
+        height: 30px;
+        width: 80px;
+        transform: translate(60px,125px);  
+    }
+
+    75% {
+        
+        height: 30px;
+        width: 80px;
+        transform: translate(60px,125px);  
+    }
+    97% {
+        
+        height: 30px;
+        width: 80px;
+        transform: translate(60px,125px);  
+    }
+    98% {
+        
+        height: 0px;
+        width: 0px;
+        transform: translate(95px,125px);  
+    }
+    100% {
+        
+        height: 30px;
+        width: 80px;
+        transform: translate(60px,125px);  
+    }
+}
+
+.battery {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    color: green;
+    width: 200px;
+    height: 120px;
+    border: 20px solid;
+    border-radius: 30px;
+    margin-left: -30px;
+    transform: translate(400px,100px);
+}
+.battery::after,
+.battery::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    height: 60px;
+    background: currentColor;
+    top: 10px
+}
+.battery::before {
+    right: -40px;
+    border-radius: 30px;
+    width: 40px
+}
+.battery::after {
+    width: 140px;
+    left: 10px;
+    animation: battery 5s linear infinite ;
+}
+@keyframes battery {
+    0% {
+        
+        width: 0%;
+        color: red;
+    }
+    20% {
+        
+        width: 25%;
+        color: orange;
+    }
+    25% {
+        
+        width: 25%;
+        color: orange;
+    }
+    45% {
+        
+        width: 50%;
+        color: yellow;
+    }
+    50% {
+        
+        width: 50%;
+        color: yellow;
+    }
+
+    70% {
+        
+        width: 70%;
+        color: lightgreen;
+    }
+    75% {
+        
+        width: 70%;
+        color: lightgreen;
+    }
+    95% {
+        
+        width: 141px;
+        color: green;
+    }
+   
+    100% {
+        
+        width: 141px;
+        color: green;
+    }
+}
